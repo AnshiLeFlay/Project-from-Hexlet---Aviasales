@@ -1,0 +1,23 @@
+.button_default {
+    padding: 14px 16px;
+
+    background: #2bbb49;
+    border-radius: 12px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 21px;
+    letter-spacing: 0.025em;
+}
+
+.button_default:disabled {
+    opacity:60%;
+}

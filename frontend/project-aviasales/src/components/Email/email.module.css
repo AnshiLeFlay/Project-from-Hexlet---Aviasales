@@ -1,0 +1,42 @@
+.email {
+    background: linear-gradient(0deg, #051237, #051237),
+        linear-gradient(
+            95.89deg,
+            rgba(98, 255, 130, 0.988235) 11.34%,
+            #29ba47 93.32%
+        );
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.025em;
+    text-align: left;
+
+    padding: 16px 13px;
+
+    width: 100%;
+
+    color: #ffffff;
+
+    border: 1px solid;
+    border-image-source: linear-gradient(
+        95.89deg,
+        rgba(98, 255, 130, 0.988235) 11.34%,
+        #29ba47 93.32%
+    );
+    border-radius: 6px;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.error {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 137%;
+    color: rgba(255, 255, 255, 0.5);
+    height: 17px;
+    margin-top: 4px;
+}

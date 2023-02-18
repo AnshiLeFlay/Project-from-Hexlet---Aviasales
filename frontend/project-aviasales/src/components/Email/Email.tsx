@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { CHANGE_EMAIL } from "../../services/actions";
+import { useSelector } from "../../services/hooks";
 
 import styles from "./email.module.css";
 
 const Email = () => {
+    const exist = useSelector((store) => store.exist);
+    const serverSuccess = useSelector((store) => store.serverSuccess);
+    
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");
 
@@ -35,7 +39,7 @@ const Email = () => {
                 placeholder="Ввести email"
                 type="text"
             />
-            <div className={`${styles.error}`}>{error}</div>
+            <div className={`${styles.error}`}>{error}<br />{ exist !== 'none' && serverSuccess && 'email уже зарегистрирован' }</div>
         </div>
     );
 };

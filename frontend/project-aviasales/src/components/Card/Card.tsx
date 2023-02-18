@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
 import Button from "../Button/Button";
 
@@ -11,6 +11,7 @@ interface ICard {
     children?: any;
     btnText: string;
     disabledBtn?: boolean;
+    onClickHandle?: MouseEventHandler;
 }
 
 const Card = (props: ICard) => {
@@ -27,7 +28,7 @@ const Card = (props: ICard) => {
             <div className={`${styles.wrapper100}`}>{props.children}</div>
 
             <Button
-                onClick={() => console.log("clicked")}
+                onClick={props?.onClickHandle}
                 disabled={props?.disabledBtn}
             >
                 {props.btnText}

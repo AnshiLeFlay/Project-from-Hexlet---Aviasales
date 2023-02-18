@@ -8,11 +8,18 @@ import Email from "./components/Email/Email";
 import styles from "./app.module.css";
 import "inter-ui/inter.css";
 import aviasalesLogo from "./images/logo.png";
-import { useSelector } from "./services/hooks";
+import { useDispatch, useSelector } from "./services/hooks";
+import { checkEmail } from "./services/actions";
 
 const App = () => {
     const email = useSelector((store) => store.email);
     const error = useSelector((store) => store.emailError);
+
+    const dispatch = useDispatch();
+
+    const btnHandle = () => {
+        dispatch(checkEmail(email));
+    }
 
     return (
         <div className="App">
@@ -48,6 +55,7 @@ const App = () => {
                         header="Оставь актуальный email"
                         btnText="Я оставил"
                         disabledBtn={ email !== '' && error === '' ? false : true }
+                        onClickHandle={btnHandle}
                     >
                         <Email />
                     </Card>

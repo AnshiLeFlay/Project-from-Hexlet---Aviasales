@@ -72,6 +72,10 @@ html {
     gap: 8px;
 }
 
+.wrapper_for_flex_space {
+    justify-content: space-between;
+}
+
 .wrapper_flex_24 {
     display:flex;
     gap:24px;

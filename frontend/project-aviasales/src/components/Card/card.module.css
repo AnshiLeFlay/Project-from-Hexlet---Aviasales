@@ -15,7 +15,9 @@
 }
 
 .card_disabled {
+    position: relative;
     opacity: 30%;
+    z-index: -1;
 }
 
 .card_number {

@@ -19,5 +19,56 @@
 }
 
 .button_default:disabled {
-    opacity:60%;
+    opacity: 60%;
+}
+
+.share_button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+}
+
+.fb {
+    background: linear-gradient(
+        142.25deg,
+        #70adff 20.57%,
+        #1977f3 48.47%,
+        #064ba6 78.79%
+    );
+    box-shadow: -10px 0px 20px rgba(0, 58, 218, 0.35),
+        0px 4px 5px rgba(0, 12, 35, 0.5);
+}
+
+.vk {
+    background: linear-gradient(
+        142.25deg,
+        #60aaff 20.57%,
+        #2787f5 50.89%,
+        #005cc6 78.79%
+    );
+    box-shadow: -8px -5px 20px rgba(0, 119, 255, 0.46),
+        0px 4px 5px rgba(0, 12, 35, 0.5);
+}
+
+.ig {
+    background: linear-gradient(
+        142.25deg,
+        #d82d7e 20.57%,
+        #df406c 48.47%,
+        #fa8f21 78.79%
+    );
+    box-shadow: -10px 0px 20px rgba(255, 0, 108, 0.33),
+        0px 4px 5px rgba(0, 12, 35, 0.5);
+}
+
+.tw {
+    background: linear-gradient(
+        141.2deg,
+        #73caff 20.61%,
+        #1da1f2 50.17%,
+        #007cc8 82.31%
+    );
+    box-shadow: -8px 3px 20px rgba(0, 158, 255, 0.4),
+        0px 4px 5px rgba(0, 12, 35, 0.5);
 }

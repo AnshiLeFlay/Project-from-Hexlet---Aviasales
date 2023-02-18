@@ -1,25 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-//components
+//components & functions
 import Card from "./components/Card/Card";
 import Email from "./components/Email/Email";
+import ShareButton from "./components/Button/ShareButton";
+import { useDispatch, useSelector } from "./services/hooks";
+import { checkEmail } from "./services/actions";
 
 //styles & images
 import styles from "./app.module.css";
 import "inter-ui/inter.css";
 import aviasalesLogo from "./images/logo.png";
-import { useDispatch, useSelector } from "./services/hooks";
-import { checkEmail } from "./services/actions";
 
 const App = () => {
     const email = useSelector((store) => store.email);
     const error = useSelector((store) => store.emailError);
+    const successEmail = useSelector((store) => store.saveSuccess);
 
     const dispatch = useDispatch();
 
+    const [cardOne, setCardOne] = useState<boolean>(true);
+    const [cardSecond, setCardSecond] = useState<boolean>(false);
+
     const btnHandle = () => {
         dispatch(checkEmail(email));
-    }
+    };
+
+    useEffect(() => {
+        if (successEmail === true) {
+            setCardOne(false);
+            setCardSecond(true);
+        }
+    }, [successEmail]);
 
     return (
         <div className="App">
@@ -51,10 +63,12 @@ const App = () => {
                 <div className={`${styles.wrapper_half}`}>
                     <Card
                         n="1"
-                        active={true}
+                        active={cardOne}
                         header="Оставь актуальный email"
                         btnText="Я оставил"
-                        disabledBtn={ email !== '' && error === '' ? false : true }
+                        disabledBtn={
+                            email !== "" && error === "" ? false : true
+                        }
                         onClickHandle={btnHandle}
                     >
                         <Email />
@@ -63,10 +77,17 @@ const App = () => {
                 <div className={`${styles.wrapper_half}`}>
                     <Card
                         n="2"
-                        active={false}
+                        active={cardSecond}
                         header="Поделись с друзьями"
                         btnText="Я поделился"
-                    />
+                    >
+                        <div className={`${styles.wrapper_flex_center} ${styles.wrapper_for_flex_space}`}>
+                            <ShareButton type="facebook" />
+                            <ShareButton type="vk" />
+                            <ShareButton type="twitter" />
+                            <ShareButton type="instagram" />
+                        </div>
+                    </Card>
                 </div>
             </div>
         </div>

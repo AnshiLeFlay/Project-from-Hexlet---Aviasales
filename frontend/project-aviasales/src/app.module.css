@@ -60,7 +60,13 @@ html {
 }
 
 .text_gradient {
-    background: conic-gradient(from 162.72deg at 44.88% 50%, #2B65FB 0deg, #28D8FF 148.13deg, #85FFB6 307.63deg, #17C213 360deg);
+    background: conic-gradient(
+        from 162.72deg at 44.88% 50%,
+        #2b65fb 0deg,
+        #28d8ff 148.13deg,
+        #85ffb6 307.63deg,
+        #17c213 360deg
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -72,13 +78,18 @@ html {
     gap: 8px;
 }
 
+.wrapper_flex {
+    display: flex;
+    gap: 14vh;
+}
+
 .wrapper_for_flex_space {
     justify-content: space-between;
 }
 
 .wrapper_flex_24 {
-    display:flex;
-    gap:24px;
+    display: flex;
+    gap: 24px;
 }
 
 .m_t_45 {
@@ -90,5 +101,5 @@ html {
 }
 
 .wrapper_half {
-    width:50%;
+    width: 50%;
 }

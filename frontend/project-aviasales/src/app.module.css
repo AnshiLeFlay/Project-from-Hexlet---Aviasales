@@ -35,24 +35,32 @@ html {
     }
 }
 
+.App {
+    max-width: 74.9727vw;
+    padding: 1.80738vw 0px;
+}
+
 .text {
     font-weight: 700;
     letter-spacing: 0em;
 }
 
 .text_large {
-    font-size: 40px;
-    line-height: 40px;
+    /*font-size: 40px;*/
+    font-size: 2.6776vw;
+    /*line-height: 40px;*/
 }
 
 .text_medium {
-    font-size: 20px;
-    line-height: 30px;
+    /*font-size: 20px;*/
+    font-size: 1.3388vw;
+    line-height: 150%;
 }
 
 .text_small {
-    font-size: 14px;
-    line-height: 19px;
+    /*font-size: 14px;*/
+    font-size: 0.937158vw;
+    /*line-height: 19px;*/
 }
 
 .text_upper_case {
@@ -97,9 +105,22 @@ html {
 }
 
 .m_b_95 {
-    margin-bottom: 95px;
+    margin-bottom: 7.5vh; /*~95px*/
 }
 
 .wrapper_half {
     width: 50%;
+}
+
+.wrapper_rocket {
+    width: 20vw;
+    height: auto;
+}
+
+.rocket {
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/rocket.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }

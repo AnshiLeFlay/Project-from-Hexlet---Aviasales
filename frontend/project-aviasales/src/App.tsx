@@ -11,7 +11,6 @@ import { checkEmail } from "./services/actions";
 import styles from "./app.module.css";
 import "inter-ui/inter.css";
 import aviasalesLogo from "./images/logo.png";
-import rocketAviasales from "./images/rocket.svg";
 import Button from "./components/Button/Button";
 
 const App = () => {
@@ -52,7 +51,7 @@ const App = () => {
     }, [successEmail]);
 
     return (
-        <div className="App">
+        <div className={`App ${styles.App}`}>
             <div className={`${styles.wrapper_flex_center} ${styles.m_b_95}`}>
                 <img src={aviasalesLogo} alt="aviasales-logo" />
                 <span>авиасейлс</span>
@@ -96,7 +95,9 @@ const App = () => {
                         </div>
                     </div>
                     {secondStep ? (
-                        <div className={`${styles.wrapper_half} ${styles.m_t_45}`}>
+                        <div
+                            className={`${styles.wrapper_half} ${styles.m_t_45}`}
+                        >
                             <Button>Пройти игру заново</Button>
                         </div>
                     ) : (
@@ -155,8 +156,8 @@ const App = () => {
                         </div>
                     )}
                 </div>
-                <div>
-                    <img src={rocketAviasales} alt="rocket" />
+                <div className={`${styles.wrapper_rocket}`}>
+                    <div className={`${styles.rocket}`}></div>
                 </div>
             </div>
         </div>

@@ -109,7 +109,7 @@ html {
 }
 
 .wrapper_half {
-    width: 50%;
+    width: 18vw;
 }
 
 .wrapper_rocket {
@@ -123,4 +123,18 @@ html {
     background-image: url("./images/rocket.png");
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.error_box {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 137%;
+    color: rgba(245, 71, 89, 1);
+    height: 17px;
+    margin-top: 10px;
+}
+
+.wrapper25 {
+    width:24%;
 }

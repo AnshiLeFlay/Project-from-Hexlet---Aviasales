@@ -131,22 +131,30 @@ const App = () => {
                                     <div
                                         className={`${styles.wrapper_flex_center} ${styles.wrapper_for_flex_space}`}
                                     >
-                                        <ShareButton
-                                            onClick={handleTestShare}
-                                            type="facebook"
-                                        />
-                                        <ShareButton
-                                            onClick={handleTestShare}
-                                            type="vk"
-                                        />
-                                        <ShareButton
-                                            onClick={handleTestShare}
-                                            type="twitter"
-                                        />
-                                        <ShareButton
-                                            onClick={handleTestShare}
-                                            type="instagram"
-                                        />
+                                        <div className={`${styles.wrapper25}`}>
+                                            <ShareButton
+                                                onClick={handleTestShare}
+                                                type="facebook"
+                                            />
+                                        </div>
+                                        <div className={`${styles.wrapper25}`}>
+                                            <ShareButton
+                                                onClick={handleTestShare}
+                                                type="vk"
+                                            />
+                                        </div>
+                                        <div className={`${styles.wrapper25}`}>
+                                            <ShareButton
+                                                onClick={handleTestShare}
+                                                type="twitter"
+                                            />
+                                        </div>
+                                        <div className={`${styles.wrapper25}`}>
+                                            <ShareButton
+                                                onClick={handleTestShare}
+                                                type="instagram"
+                                            />
+                                        </div>
                                     </div>
                                     <div className={`${styles.error_box}`}>
                                         &nbsp;{shareError}

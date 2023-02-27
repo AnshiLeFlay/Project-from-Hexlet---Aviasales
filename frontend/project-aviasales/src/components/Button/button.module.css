@@ -1,8 +1,9 @@
 .button_default {
-    padding: 14px 16px;
+    padding: 14px 0px;
 
     background: #2bbb49;
     border-radius: 12px;
+    border: none;
     width: 100%;
 
     display: flex;
@@ -14,8 +15,9 @@
 
     font-size: 1.2vh;
     font-weight: 900;
-    line-height: 21px;
+    line-height: 130%;
     letter-spacing: 0.025em;
+    font-style: normal;
 }
 
 .button_default:disabled {
@@ -23,13 +25,19 @@
 }
 
 .share_button {
-    width: 48px;
-    height: 48px;
+    width: 100%;
+    max-width: 48px;
+    aspect-ratio : 1 / 1;
     border-radius: 50%;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.share_button img {
+    width: fit-content;
+    height: auto;
 }
 
 .fb {
